@@ -2,56 +2,74 @@
 
 Welcome to the **Football Tally** application! This is a complete, full-stack application designed to track football competition match results and display a real-time, dynamic leaderboard/standings table.
 
+## 🎬 Demo
+
+> Click the badge below to watch the app in action:
+
+![Football Tally Demo](https://screenrec.com/share/Mv3a2w4ukO)
+
+---
+
 ## 🗂️ Project Structure
 
 The project is split into two primary components:
 
-*   **[`/backend`](./backend)**: A TypeScript Node.js Express server that processes submitted matches, calculates scores, and persists standings state in a JSON file.
-*   **[`/frontend`](./frontend)**: A modern Next.js React client with Tailwind CSS, supporting interactive forms for match logging, text file uploads, and responsive standings display.
+- **[`/backend`](./backend)**: A TypeScript Node.js Express server that processes submitted matches, calculates scores, and persists standings state in a JSON file.
+- **[`/frontend`](./frontend)**: A modern Next.js React client with Tailwind CSS, supporting interactive forms for match logging, text file uploads, and responsive standings display.
 
 ---
 
-## 🚀 Quick Start (Running the App)
+## 🏗️ Architecture
 
-Follow these steps to run both the backend and frontend servers on your local machine:
+```
+football_tally_aligntech/
+├── backend/                  # Express API (port 5000)
+│   ├── src/
+│   │   ├── models/           # Match, Team, Tournament classes
+│   │   ├── services/         # Business logic + file persistence
+│   │   ├── controllers/      # Request handlers
+│   │   └── routes/           # API route definitions
+│   └── src/swagger.json      # OpenAPI docs → /api-docs
+│
+└── frontend/                 # Next.js UI (port 3000)
+    ├── app/                  # Next.js App Router
+    ├── components/           # Header, StandingsTable, Toast, etc.
+    └── lib/                  # API client + TypeScript types
+```
 
-### ⚙️ Prerequisites
-Ensure you have [Node.js](https://nodejs.org/) installed (v18+ recommended).
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+[Node.js](https://nodejs.org/) v18+ required.
 
 ### 1. Start the Backend
-1. Open a terminal and navigate to the backend folder:
-   ```bash
-   cd backend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the backend development server:
-   ```bash
-   npm run dev
-   ```
-   The backend API will run on **`http://localhost:5000`**.
+```bash
+cd backend
+npm install
+npm run dev
+```
+API runs on **`http://localhost:5000`** · Swagger docs at **`http://localhost:5000/api-docs`**
 
 ### 2. Start the Frontend
-1. Open a *new* terminal window and navigate to the frontend folder:
-   ```bash
-   cd frontend
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the Next.js development server:
-   ```bash
-   npm run dev
-   ```
-   Open **[`http://localhost:3000`](http://localhost:3000)** in your browser to view the application.
+```bash
+cd frontend
+npm install
+npm run dev
+```
+Open **[`http://localhost:3000`](http://localhost:3000)** in your browser.
 
 ---
 
-## 🧪 Testing the Application
+## 🧪 Running Tests
 
-Both backend and frontend contain full unit and integration test suites:
-- To test the backend: Run `npm run test` in `/backend`.
-- To test the frontend: Run `npm run test` in `/frontend`.
+```bash
+# Backend tests
+cd backend && npm test
+
+# Frontend tests
+cd frontend && npm test
+```
+
+Both suites include unit tests with full coverage.

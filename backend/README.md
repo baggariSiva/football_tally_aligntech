@@ -59,7 +59,7 @@ Where `result` must be either:
 *Note: Draws are not supported.*
 
 ### 📄 Sample Input
-A sample file is included at: **[`sample_matches.txt`](./sample_matches.txt)**:
+A sample file is included at: **[`sample_matches.txt`](../sample_matches.txt)**:
 ```text
 Germany;Spain;win
 Spain;France;win

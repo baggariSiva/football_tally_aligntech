@@ -12,10 +12,11 @@ Welcome to the **Football Tally** application! This is a complete, full-stack ap
 
 ## 🗂️ Project Structure
 
-The project is split into two primary components:
+The project contains:
 
 - **[`/backend`](./backend)**: A TypeScript Node.js Express server that processes submitted matches, calculates scores, and persists standings state in a JSON file.
 - **[`/frontend`](./frontend)**: A modern Next.js React client with Tailwind CSS, supporting interactive forms for match logging, text file uploads, and responsive standings display.
+- **[`/sample_matches.txt`](./sample_matches.txt)**: A sample input text file containing match logs in semicolon-separated format.
 
 ---
 
@@ -31,10 +32,12 @@ football_tally_aligntech/
 │   │   └── routes/           # API route definitions
 │   └── src/swagger.json      # OpenAPI docs → /api-docs
 │
-└── frontend/                 # Next.js UI (port 3000)
-    ├── app/                  # Next.js App Router
-    ├── components/           # Header, StandingsTable, Toast, etc.
-    └── lib/                  # API client + TypeScript types
+├── frontend/                 # Next.js UI (port 3000)
+│   ├── app/                  # Next.js App Router
+│   ├── components/           # Header, StandingsTable, Toast, etc.
+│   └── lib/                  # API client + TypeScript types
+│
+└── sample_matches.txt        # Sample match results input file
 ```
 
 ---

@@ -6,7 +6,7 @@ Welcome to the **Football Tally** application! This is a complete, full-stack ap
 
 > Click the badge below to watch the app in action:
 
-![Football Tally Demo](https://screenrec.com/share/Mv3a2w4ukO)
+[![Watch Demo](https://img.shields.io/badge/▶%20Watch%20Demo-screenrec.com-blue?style=for-the-badge)](https://screenrec.com/share/Mv3a2w4ukO)
 
 ---
 
